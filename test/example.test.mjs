@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { sum, now, randomArray } from "../src/example.mjs";
+import { sum, now, randomArray, SingletonObject } from "../src/example.mjs";
 
 describe("Example test fixture", () => {
   it("Example test", () => {
@@ -19,5 +19,16 @@ describe("Randomness based tests:", () => {
   it("randomArray() returns an array", () => {
     console.log(randomArray())
   })
+
+});
+
+describe("Singleton based tests:", () => {
+  it("Singleton exists:", () => {
+    let s = new SingletonObject(1, "Object A")
+    console.log(s.toString())
+    expect(s.toString()).to.equal("1 : Object A")
+    })
+
+
 
 });
