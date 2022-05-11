@@ -1,3 +1,5 @@
+import { doesNotReject } from 'assert';
+import fs from 'fs'
 export function sum(a, b) {
   return a + b;
 }
@@ -10,8 +12,8 @@ export function now() {
 }
 
 /**
- * Function returns an array with randomly generated values between 0 and 1
- * @returns Array[99] of doubles [0-1]
+ * Function returns an array with randomly generated values between 1 and 10.
+ * @returns Array[99] of integers [1-10]
  */
 export function randomArray() {
   let arr = []
@@ -36,3 +38,18 @@ export class SingletonObject {
   }
   }
 
+export function writeStringToFile( filename, string ) {
+  fs.writeFileSync(filename, string);
+}
+
+export function readFileContents(filename) {
+  return fs.readFileSync(filename).toString() ;
+}
+
+export function removeFile( filename ) {
+  fs.unlink(filename, (err) => {
+    if (err) {throw err;}
+  })
+}
+  
+  
