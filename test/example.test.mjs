@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { sum, now } from "../src/example.mjs";
+import { sum, now, randomArray } from "../src/example.mjs";
 
 describe("Example test fixture", () => {
   it("Example test", () => {
@@ -13,4 +13,11 @@ describe("Clock based tests:", () => {
   it("now() returns the correct date", () => {
     expect(now()).to.equal(new Date())
   });
+});
+
+describe("Randomness based tests:", () => {
+  it("randomArray() returns an array", () => {
+    console.log(randomArray())
+  })
+
 });
