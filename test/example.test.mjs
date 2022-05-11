@@ -16,19 +16,37 @@ describe("Clock based tests:", () => {
 });
 
 describe("Randomness based tests:", () => {
-  it("randomArray() returns an array", () => {
-    console.log(randomArray())
+  it("Two returned arrays are unique ", () => {
+    let arr1 = randomArray();
+    let arr2 = randomArray();
+    console.log(arr1)
+    expect(arr1).to.not.equal(arr2);
   })
+
+  it("Several ")
 
 });
 
+
+/*
+  Singleton testing is problematic due to the requirement of 
+  the singleton being instanciated; 
+
+*/
 describe("Singleton based tests:", () => {
   it("Singleton exists:", () => {
     let s = new SingletonObject(1, "Object A")
     console.log(s.toString())
     expect(s.toString()).to.equal("1 : Object A")
-    })
+  });
 
+  it("New singletons equal the first:", () => {
+    let s = new SingletonObject(1, "Object A")
+    let s2 = new SingletonObject(2, "Object B")
+    console.log(s.toString())
+    expect(s).to.equal(s2)
+    })
+    
 
 
 });

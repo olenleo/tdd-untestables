@@ -32,7 +32,7 @@ export class SingletonObject {
       else { return checkInstance;}
     }
   toString() {
-    //return this.id + " : " + this.name
+    return this.id + " : " + this.name
   }
   }
 
