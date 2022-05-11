@@ -16,7 +16,7 @@ export function now() {
 export function randomArray() {
   let arr = []
   for (let i =0; i < 100; i++) {
-    arr.push(Math.random())
+    arr.push(Math.floor(Math.random() * 10) + 1)
   }
   return arr;
 }
